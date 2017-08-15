@@ -1,0 +1,29 @@
+.section_1{
+    /*background:url("../../public/images/home-bg.jpg") no-repeat center center;*/
+    width: 100%;
+    height: 100%;
+}
+.section_1 img{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+.section_1  .autotype{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    font-size: 40px;
+    width: 400px;
+    height: 400px;
+    margin-left:-200px;
+    z-index: 10;
+    color: #fff;
+    text-align: center;
+}
+.section_1  .autotype p{
+    line-height: 50px;
+}
