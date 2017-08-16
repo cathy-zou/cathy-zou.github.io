@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+* { margin: 0; padding: 0 }
+body { font: 12px "宋体", "Arial Narrow", HELVETICA; color: #3F3E3C; line-height: 1.5; 
+    background:url("../../public/images/blog-bg.jpg") no-repeat center center; }
+img { border: 0; vertical-align: middle }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h1 { font: 24px "微软雅黑", "Microsoft YaHei", Arial, Helvetica, sans-serif }
+p { word-wrap: break-word }
+ul, ol { list-style: none; }
+a { color: #a6a6a6; text-decoration: none; transition: All 1s ease; -webkit-transition: All 1s ease; -moz-transition: All 1s ease; -ms-transition: All 1s ease; -o-transition: All 1s ease; }
+a:hover { color: #fff; }
+.blank { height: 5px; overflow: hidden; width: 100%; margin: auto; clear: both }
+
+.main{
+    width: 100%;
+    padding-top: 120px;
+}
+.w{
+    width: 80%;
+    margin: 0 auto;
+}
+.main .main-header{
+    height: 50px;
+    background: yellow;
+}
+.main .main-body{
+    background: greenyellow;
+}
+.main .main-body .main-aside{
+    height: 800px;
+    background: red;
+}
+.main .main-body .main-article{
+    height: 800px;
+    background: deepskyblue;
+}

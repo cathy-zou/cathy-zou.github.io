@@ -105,6 +105,21 @@ define(['jquery'], function($) {
             draw_canvas();
         }, 100);
 
+        function async_load() {
+
+            i.scrolling = "no";
+            i.frameborder = "0";
+            i.border = "3";
+            i.setAttribute("frameborder", "0", 0);
+            i.width = "100px";
+            i.height = "20px";
+            document.getElementById("hub_iframe").appendChild(i);
+        }
+
+        if (window.addEventListener) {window.addEventListener("load", async_load, false);}
+        else if (window.attachEvent) {window.attachEvent("onload", async_load);}
+        else {window.onload = async_load;}
+
     $.fn.autotype = function() {
         var $text = $(this);
         console.log('this', this);

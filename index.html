@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>MyZone</title>
@@ -61,21 +62,8 @@
 <script src="./public/src/require.js"></script>
 <script src="./public/src/config.js"></script>
     <script>
-        require(['home','common','bootstrap'],function(i){
-            function async_load() {
+        require(['home','common','bootstrap'],function(){
 
-                i.scrolling = "no";
-                i.frameborder = "0";
-                i.border = "3";
-                i.setAttribute("frameborder", "0", 0);
-                i.width = "100px";
-                i.height = "20px";
-                document.getElementById("hub_iframe").appendChild(i);
-            }
-
-            if (window.addEventListener) {window.addEventListener("load", async_load, false);}
-            else if (window.attachEvent) {window.attachEvent("onload", async_load);}
-            else {window.onload = async_load;}
         })
     </script>
 </body>
