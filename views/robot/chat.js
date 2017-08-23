@@ -37,6 +37,7 @@ function  chat() {
             }
         },
         error:function (res) {
+            console.log(res);
             alert('出错了');
         },
         beforeSend:function () {
