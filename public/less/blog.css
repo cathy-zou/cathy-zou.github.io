@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 * { margin: 0; padding: 0 }
-body { font: 12px "宋体", "Arial Narrow", HELVETICA; color: #3F3E3C; line-height: 1.5; 
+body { font: 12px "microsoft yahei", "Arial Narrow", HELVETICA; color: #3F3E3C; line-height: 1.5;
     background:url("../../public/images/blog-bg.jpg") no-repeat center center; }
 img { border: 0; vertical-align: middle }
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
@@ -22,16 +22,43 @@ a:hover { color: #fff; }
 }
 .main .main-header{
     height: 50px;
-    background: yellow;
+    background: linear-gradient(#eee,#ddd,#e7e7e7,#eee);
+    border:1px solid #aaa;
 }
 .main .main-body{
-    background: greenyellow;
+
 }
+/*边栏*/
 .main .main-body .main-aside{
     height: 800px;
-    background: red;
+    background: linear-gradient(#eee,#ddd,#e7e7e7,#eee);
+    border: 1px solid #aaa;
 }
+.main .main-body .main-aside .aside-info{
+    width: 80%;
+    padding:10px 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+}
+.main-body .main-aside .aside-info img{
+    width: 100%;
+    padding: 15px;
+
+    background: rgba(255,255,255,.6);
+}
+.main-body .main-aside .info-content i{
+    color: goldenrod;
+    font-size: 16px;
+}
+.main-body .main-aside .info-content a{
+    font-size: 16px;
+    color: #2aabd2;
+}
+
+/*主栏*/
 .main .main-body .main-article{
     height: 800px;
-    background: deepskyblue;
+    background: linear-gradient(#eee,#ddd,#e7e7e7,#eee);
+    border: 1px solid #aaa;
 }

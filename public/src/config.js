@@ -8,6 +8,7 @@ require.config( {
         progress: 'assets/nprogress/nprogress',
         bootstrap: 'assets/bootstrap/js/bootstrap.min',
         ztree: 'assets/zTree/js/jquery.ztree.all',
+        My97DatePicker:'assets/My97DatePicker/WdatePicker',
 
         // 自定义模块
         utils: 'utils/utils',
@@ -23,6 +24,9 @@ require.config( {
             deps: [ 'jquery' ]
         },
         ztree:{
+            deps:['jquery']
+        },
+        My97DatePicker:{
             deps:['jquery']
         }
     }

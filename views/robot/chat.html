@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div class="dog-box">
+        <div class="dog">
+            <div class="dog-body">
+                <div class="dog-tail">
+                    <div class="dog-tail">
+                        <div class="dog-tail">
+                            <div class="dog-tail">
+                                <div class="dog-tail">
+                                    <div class="dog-tail">
+                                        <div class="dog-tail">
+                                            <div class="dog-tail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dog-torso"></div>
+            <div class="dog-head">
+                <div class="dog-ears">
+                    <div class="dog-ear"></div>
+                    <div class="dog-ear"></div>
+                </div>
+                <div class="dog-eyes">
+                    <div class="dog-eye"></div>
+                    <div class="dog-eye"></div>
+                </div>
+                <div class="dog-muzzle">
+                    <div class="dog-tongue"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ball" tabindex="0"></div>
+    </div>
+    <div class="chat-box">
+        <div class="chat-info">
+            <div class="avatar">
+                <img src="../../uploads/robot.jpg"/>
+            </div>
+            <div class="name">
+                大怪兽
+            </div>
+            <p>
+                跟我聊聊天吧~
+            </p>
+        </div>
+        <div class="chat-content">
+            <div class="chat-con">
+                <!--<div class="des">-->
+                    <!--<div class="left">-->
+                        <!--<div class="info-ava">-->
+                            <!--<img src="../../uploads/robot.jpg" alt="">-->
+                        <!--</div>-->
+                        <!--<p class="info">-->
+                            <!--你好-->
+                        <!--</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+               <!--<div class="des">-->
+                   <!--<div class="right">-->
+                       <!--<p class="info">-->
+                           <!--你好-->
+                       <!--</p>-->
+                       <!--<div class="info-ava">-->
+                           <!--<img src="../../uploads/avatar.jpg" alt="">-->
+                       <!--</div>-->
+                   <!--</div>-->
+               <!--</div>-->
+            </div>
+            <div class="chat-input">
+                <textarea name="" id=""></textarea>
+                <input type="submit" value="发送">
+            </div>
+        </div>
+    </div>
+    <div class="model-box">
+        <div class="error">出错了~</div>
+    </div>
+    <script src="../../public/assets/jquery/jquery.min.js"></script>
+    <script src="../../public/assets/artTemplate/template.js"></script>
+
+    <script type="text/html" id="tmpLeft">
+        <div class="des">
+            <div class="left">
+                <div class="info-ava">
+                    <img src="../../uploads/robot.jpg" alt="">
+                </div>
+                <p class="info">
+                    {{text}}
+                </p>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="tmpLink">
+        <div class="des">
+            <div class="left">
+                <div class="info-ava">
+                    <img src="../../uploads/robot.jpg" alt="">
+                </div>
+                <p class="info">
+                    {{text}}
+                    <a target=_blank href="{{url}}">点击这里</a>
+                </p>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="tmpRight">
+        <div class="des">
+            <div class="right">
+                <p class="info">
+                    {{val}}
+                </p>
+                <div class="info-ava">
+                    <img src="../../uploads/avatar.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script src="./chat.js"></script>
+</body>
+</html>
