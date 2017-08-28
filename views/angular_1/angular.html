@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>电影推荐</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>最新推荐</title>
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.css">
 </head>
-<body>
+<body ng-app="myApp">
+<!--头部-->
+<div class="sui-navbar navbar-inverse" ng-controller="header">
+    <div class="navbar-inner">
+        <div class="sui-container"><a href="#" class="sui-brand">豆瓣PC</a>
+            <ul class="sui-nav">
+                <li ng-click="option('home')" ng-class="{'active':value=='home'}"><a href="#/home">首页</a></li>
+                <li ng-click="option('movie')" ng-class="{'active':value=='movie'}"><a href="#/movie/in_theaters">电影</a></li>
+                <li ng-click="option('book')" ng-class="{'active':value=='book'}"><a href="#/book/search">图书</a></li>
+                <li ng-click="option('music')" ng-class="{'active':value=='music'}"><a href="#">音乐</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
+<div class="main" ng-view>
+
+</div>
+
+
+
+    <!--插件模块-->
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="angular-resource.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <!--自定义模块-->
+    <script src="./module/main.js"></script>
+    <script src="./module/controller.js"></script>
+    <script src="./module/service.js"></script>
+    <script src="./module/route.js"></script>
+    <script src="./module/sessionStorage.js"></script>
 </body>
 </html>

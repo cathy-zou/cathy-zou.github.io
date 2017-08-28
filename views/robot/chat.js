@@ -1,17 +1,22 @@
 $(function(){
     $('.chat-input input').on('click',function(){
       chat();
+        skipTop();
     })
     $(document).on('keydown',function (e) {
         var key = e.which;
         if (key == 13) {
             chat();
+            skipTop();
         }
     })
 });
 
 function  chat() {
     var val=$('.chat-input textarea').val();
+    if(!val){
+        return false;
+    }
     var myData={val:val}
     var html=template('tmpRight',myData);
     $('.chat-con').append(html);
@@ -41,7 +46,15 @@ function  chat() {
             alert('出错了');
         },
         beforeSend:function () {
-            console.log(1);
+            // console.log(1);
         }
     })
+}
+function skipTop(){
+    var height=100+$('.chat-con').height()-$('.con-box').height();
+    console.log(height);
+   if(height<0){
+       $('.chat-con').animate({scrollTop:height},500);
+   }
+    console.log($('.con-box').scrollTop());
 }

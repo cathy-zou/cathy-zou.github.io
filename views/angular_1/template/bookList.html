@@ -1,0 +1,45 @@
+<!--搜索框-->
+<form ng-submit="search()" class="sui-form sui-form pull-right" ng-controller="bookSearch">
+    <input type="text" ng-model="bookSearch" placeholder="请输入...">
+    <button class="sui-btn">搜索</button>
+</form>
+<!--侧边栏-->
+<aside>
+    <ul class="sui-nav nav-list">
+        <li class="nav-header">分类</li>
+        <li class="active"><a href="javascript:;">小王子</a></li>
+    </ul>
+</aside>
+<!--主要内容区域-->
+<div class="main-context">
+    <h1>{{search}}</h1>
+    <div class="list-group">
+        <a ng-repeat="item in listData track by $index" href="#/bookDetails/{{item.id}}" class="list-group-item">
+            <div class="media">
+                <div class="media-left pull-left">
+                    <img class="media-object" alt="{{item.title}}" ng-src="{{item.images.small}}">
+                </div>
+                <div class="media-body">
+                    <span class="badge badge-default radius">{{item.rating.average}}</span>
+                    <h3 class="media-heading ">{{item.title}}</h3>
+                    <p>价格：<span>{{item.price}}</span>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <p>出版时间：<span>{{item.pubdate}}</span>&nbsp;&nbsp;&nbsp;&nbsp;页数：
+                        <span>{{item.pages}}</span></p>
+                    <p>出版社：
+                        <span>{{item.publisher}}</span>
+                    </p>
+
+                </div>
+            </div>
+        </a>
+    </div>
+    <div>
+        <p>总共：{{total}}条记录，第{{page}}/{{maxPage}}页</p>
+        <nav>
+            <ul class="pager">
+                <li ng-class="{'disabled':page<=1?true:false}" ng-click="prev()"><a>上一页</a></li>
+                <li ng-class="{'disabled':page>=maxPage?true:false}" ng-click="next()"><a>下一页</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

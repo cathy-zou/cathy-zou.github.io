@@ -1,0 +1,12 @@
+<div class="sui-container">
+    <div class="movieList span3">
+        <h2>电影排行榜</h2>
+        <ul id="Huifold1" class="Huifold">
+            <a  ng-repeat="items in dataList track by $index" href="#/movieDetail/{{items.id}}">
+                <li class="item">
+                    <h4><span ng-class="{'sui-label':true,'label-danger':$index==0?true:false,'label-warning':$index==1?true:false,'label-success':$index==2?true:false}">{{$index+1}}</span>&nbsp;&nbsp;&nbsp;&nbsp;{{items.title}}</h4>
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>

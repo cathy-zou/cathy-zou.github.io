@@ -1,0 +1,41 @@
+<div class="movie-main">
+    <div class="sui-container">
+        <h1>{{list.title}}&nbsp;&nbsp;({{list.original_title}})</h1>
+        <div class="movie-images">
+            <img ng-src="{{list.images.large}}" alt="">
+        </div>
+        <div class="movie-des">
+            <p class="f-l f-14 va-m">
+                评分:&nbsp;&nbsp;
+                <span class="badge badge-default radius">{{list.rating.average}}</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="pull-right">上映年份：{{list.year}}</span>
+            </p>
+
+            <p>导演：
+                <span ng-repeat="director in list.directors track by $index"><a href="{{director.alt}}">{{director.name}}</a>{{$last?'':'、'}}</span> </p>
+            <p>主演：
+                <span ng-repeat="cast in list.casts track by $index"><a href="{{cast.alt}}">{{cast.name}}</a>{{$last?'':'、'}}</span>
+            </p>
+            <p>类型：&nbsp;&nbsp;<span ng-repeat="genre in list.genres">{{genre}}{{$last?'':'、'}}</span></p>
+            <p>国家：&nbsp;&nbsp;<span ng-repeat="countrie in list.countries">{{countrie}}</span></p>
+            <p>故事概述:<div>&nbsp;&nbsp;&nbsp;&nbsp;{{list.summary}}</div></p>
+            <div class="movieDetailBtnGroup">
+                <a href="javascript:void(0);" class="sui-btn btn-warning"><i class="sui-icon icon-tb-favor"></i>看过({{list.collect_count}})</a>
+                <a href="javascript:void(0);" class="sui-btn btn-danger"><i class="sui-icon icon-tb-like"></i>想看({{list.wish_count}})</a>
+                <a href="#/comments/{{list.id}}/comments" class="sui-btn icon-pencil"><i class="sui-icon icon-tb-edit"></i>短评</a>
+                <a href="#/comments/{{list.id}}/reviews" class="sui-btn icon-pencil"><i class="sui-icon icon-tb-edit"></i>影评</a>
+            </div>
+        </div>
+        <div class="movieDetailsPage">
+            <div class="sui-pagination pagination-large">
+                <ul>
+                    <li ng-class="{'disabled':index<0}" ng-click="prev()"><a>上一页</a></li>
+                    <li ng-class="{'disabled':index>maxIndex}" ng-click="next()"><a>下一页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="back">
+            <a href="#/movie/in_theaters" class="sui-btn btn-xlarge">返回</a>
+        </div>
+    </div>
+</div>

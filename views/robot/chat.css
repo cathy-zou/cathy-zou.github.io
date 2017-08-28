@@ -647,11 +647,13 @@ html, body {
     height: 100%;
     width: 598px;
 }
-.chat-content .chat-con{
+.con-box{
     height: 400px;
-    border-bottom: 1px solid #eee;
-    width: 100%;
     overflow: auto;
+    border-bottom: 1px solid #eee;
+}
+.chat-content .chat-con{
+    width: 100%;
     padding-top: 30px;
 }
 .chat-content .chat-input{
